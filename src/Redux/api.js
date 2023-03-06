@@ -2,7 +2,7 @@ import axios from "axios";
 
 const instance = axios.create({
     baseURL: "http://localhost:9005/api/",
-    withCredentials: false,
+    withCredentials: true,
 })
 
 export function getQuestionReq(type, curQuest){
@@ -19,4 +19,12 @@ export function getTestsListReq(){
 
 export function getDataAboutTestReq(id){
     return instance.get(`/test?type=${id}`)
+}
+
+export function loginWithoutCredsReq(email, password, remember){
+    return instance.post('/login', {email, password, remember}, {withCredentials: false})
+}
+
+export function loginWithCredsReq(){
+    return instance.get('/login')
 }

@@ -19,11 +19,6 @@ const loginReducer = createSlice({
 
             return state;
         },
-        wantToEditName(state, action){
-            state.edited = true;
-
-            return state
-        },
     }
 })
 

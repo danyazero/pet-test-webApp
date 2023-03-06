@@ -12,9 +12,11 @@ function mapStateToProps(state){
 function mapDispatchToProps(dispatch){
     return{
         onSubmit(values){
+
             const data={
                 username: values.email,
-                password : values.password
+                password : values.password,
+                remember: values.remember,
             }
             dispatch(adminAuth(data))
         }

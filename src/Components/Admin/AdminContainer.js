@@ -1,5 +1,6 @@
 import {connect} from "react-redux";
 import Admin from "./Admin";
+import {loginWithCreds} from "../../Redux/adminReducer";
 
 function mapStateToProps(state){
     return{
@@ -9,7 +10,9 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return{
-
+        loginWithCreds(){
+            dispatch(loginWithCreds())
+        }
     }
 }
 

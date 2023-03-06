@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {LoginContainer} from "./Login/LoginContainer";
 
 const Admin = (props) => {
+
+    useEffect(() => {
+        props.loginWithCreds()
+    }, [])
 
     function authChecker() {
         if (props.isAuth) {
