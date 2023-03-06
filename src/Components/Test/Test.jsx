@@ -12,7 +12,7 @@ const Test = (props) => {
     }, [])
 
     useEffect(() => {
-        if (props.curPos >= props.amount) {
+        if (props.curPos >= props.amount-1) {
             props.analyzeResult()
             navigate("/result")
         }

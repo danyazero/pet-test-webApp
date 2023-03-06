@@ -11,10 +11,8 @@ const loginReducer = createSlice({
     },
     reducers: {
         startTestReducer(state, action){
-            if (state.edited){
-                state.name = action.payload.name;
-                state.email = action.payload.email;
-            }
+            state.name = action.payload.name;
+            state.email = action.payload.email;
             state.isStarted = true;
             state.isAuth = true;
 
